@@ -1,48 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kevin Shaw</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #0f172a;
-      color: #f8fafc;
-      text-align: center;
-    }
- 
-    .card {
-      padding: 40px;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-      backdrop-filter: blur(8px);
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Shaw | Portfolio</title>
 
-    h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      font-weight: 700;
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    p {
-      margin-top: 10px;
-      font-size: 1.1rem;
-      color: #cbd5e1;
-    }
-  </style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            display: flex;
+            background: #f5f7fa;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Left Navigation */
+        nav {
+            width: 260px;
+            height: 100vh;
+            position: fixed;
+            background: #1f2937;
+            color: white;
+            padding: 40px 25px;
+        }
+
+        nav h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        nav p {
+            color: #9ca3af;
+            margin-bottom: 40px;
+            font-size: 0.95rem;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav li {
+            margin-bottom: 15px;
+        }
+
+        nav a {
+            color: #e5e7eb;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        /* Main Content */
+        main {
+            margin-left: 260px;
+            width: calc(100% - 260px);
+            padding: 50px;
+        }
+
+        section {
+            margin-bottom: 80px;
+            background: white;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #1f2937;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 70px 40px;
+        }
+
+        .hero h2 {
+            border: none;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .card {
+            margin-top: 15px;
+            padding: 15px;
+            background: #f9fafb;
+            border-left: 4px solid #2563eb;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+        }
+
+        @media (max-width: 768px) {
+
+            nav {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+
+            main {
+                margin-left: 0;
+                width: 100%;
+                padding: 20px;
+            }
+
+            body {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <div class="card">
-    <h1>Kevin Shaw</h1>
-    <p>Hello</p>
-  </div>
+
+    <nav>
+        <h1>Kevin Shaw</h1>
+        <p>IT Professional</p>
+
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section class="hero">
+            <h2>Welcome</h2>
+            <p>
+                Experienced technology professional specializing in
+                infrastructure, automation, Home Assistant, networking,
+                virtualization, and systems administration.
+            </p>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Welcome to my professional portfolio. This site highlights
+                my technical background, projects, and accomplishments.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <div class="card">
+                <strong>Home Assistant Automation Platform</strong>
+                <p>
+                    Built advanced automations using ESPHome, Frigate,
+                    MQTT, and AI-based event processing.
+                </p>
+            </div>
+
+            <div class="card">
+                <strong>Proxmox Virtualization Environment</strong>
+                <p>
+                    Designed and managed virtualized infrastructure
+                    supporting home services and storage systems.
+                </p>
+            </div>
+
+            <div class="card">
+                <strong>Computer Vision Security System</strong>
+                <p>
+                    Implemented object detection, facial recognition,
+                    and event automation using Frigate.
+                </p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+
+            <ul>
+                <li>Linux Administration</li>
+                <li>Networking & Security</li>
+                <li>Docker & Containers</li>
+                <li>Home Assistant</li>
+                <li>ESPHome</li>
+                <li>Proxmox</li>
+                <li>Python Automation</li>
+                <li>Git & GitHub</li>
+            </ul>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+
+            <div class="card">
+                <strong>Systems Administration</strong>
+                <p>
+                    Infrastructure management, virtualization,
+                    storage, backup, and disaster recovery.
+                </p>
+            </div>
+
+            <div class="card">
+                <strong>Automation Engineering</strong>
+                <p>
+                    Creating intelligent workflows and integrations
+                    across multiple platforms.
+                </p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+
+            <p>Email: your.email@example.com</p>
+            <p>LinkedIn: linkedin.com/in/yourprofile</p>
+            <p>GitHub: github.com/yourusername</p>
+        </section>
+
+        <footer>
+            © 2026 Kevin Shaw. All Rights Reserved.
+        </footer>
+
+    </main>
+
 </body>
 </html>
